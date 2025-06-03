@@ -22,14 +22,15 @@ float division(float Nu1, float Nu2){
 float resultado=0;
 resultado=Nu1/Nu2;
 
-if (Nu2!=0)
-{
-    return resultado;
+ if (Nu2!=0)
+    {
+      return resultado;
 
-}else if (resultado=5000)
-{
-    return resultado;
-}
+    }else if (Nu2==0){
+      return resultado=50000000000000;
+    }else if (Nu1<Nu2){
+        return resultado=50000000000000;
+    }
 
 
 }
@@ -93,14 +94,12 @@ int main(){
     case '5':
 
         //EXCLUSIVO PARA LA DIVISION
-    if (n2!=0)
+    if (ResultDivision!=50000000000000)
     {
         cout<<endl<<"El resultado de su division es: "<<ResultDivision;
 
-    }else if (n2==0){
-        cout<<endl<<"El resultado de su division es: invalido, no se puede dividir entre 0"<<endl;
-    }else if (ResultDivision=5000){
-        cout<<endl<<"El resultado de su division es: invalido, el primer numero no puede ser menor que el segundo";
+    }else if (ResultDivision==50000000000000){
+        cout<<endl<<"El resultado de su division es: invalido, no se puede dividir entre 0 o el segundo numero es mayor que el primero "<<endl;
     }
         break;
 
@@ -109,8 +108,8 @@ int main(){
         break;
     }
 
-    cout<<endl<<"Desea visualizar otra operacion? ";
-    cout<<endl<<"Si/s No/n";
+    cout<<endl<<"Desea visualizar otra operacion? "<<endl;
+    cout<<endl<<"Si/s No/n"<<endl;
     cin>>decision;
 
      } while (decision=='s');
